@@ -1,0 +1,152 @@
+* Estilos generales para la página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Fondo claro y profesional */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evitar scroll horizontal */
+}
+
+/* Animación para un fondo sutil */
+@keyframes backgroundMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Contenedor general */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos del banner */
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/clinicavet-banner.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 100px 20px;
+    animation: backgroundMove 10s infinite alternate ease-in-out;
+}
+.banner h1 {
+    font-size: 48px;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out; /* Animación de entrada para el título */
+}
+
+.banner p {
+    font-size: 20px;
+    margin-top: 10px;
+    animation: fadeIn 3s ease-in-out; /* Animación de entrada para el subtítulo */
+}
+
+/* Animación de fade-in */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Estilos para las opciones de botones */
+.options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-in-out forwards; /* Entrada desde abajo */
+}
+
+/* Animación para subir los botones */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.option {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.option:hover {
+    transform: translateY(-10px); /* Efecto de levantar el botón al hacer hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.option h2 {
+    font-size: 24px;
+    color: #007bff;
+    animation: fadeInDown 1s ease-in-out; /* Entrada desde arriba */
+}
+
+/* Animación de entrada desde arriba */
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.option .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efecto de transición */
+}
+
+.option .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Efecto de agrandar el botón al hacer hover */
+}
+/* Estilos para el formulario de login */
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
